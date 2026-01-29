@@ -12,6 +12,10 @@ on:
     types: [opened, synchronize, reopened]
   issue_comment:
     types: [created]
+  workflow_dispatch: 
+  
+    
+
 
 # Prevent concurrent runs for the same commit
 concurrency:
