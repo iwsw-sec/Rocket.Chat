@@ -54,6 +54,8 @@ jobs:
             PR_NUMBER=${{ github.event.pull_request.number }}
           elif [ "${{ github.event_name }}" == "issue_comment" ]; then
             PR_NUMBER=${{ github.event.issue.number }}
+          elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            PR_NUMBER=99
           fi
           
           # Run Socket CLI with minimal required parameters
